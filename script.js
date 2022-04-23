@@ -36,3 +36,21 @@ function operate(operand, num1, num2) {
         return divide(num1, num2)
     }
 };
+
+
+function operandID(clickedOperand) {
+    console.log(clickedOperand)
+    return clickedOperand;
+}
+function numberID(clickedNumber) {
+    console.log(clickedNumber)
+    return clickedNumber;
+}
+
+function clearID(clickedClear) {
+    console.log(clickedClear)
+    return clickedClear;
+}
+
+let displayValue = document.getElementById('display');
+
