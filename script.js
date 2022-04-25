@@ -4,6 +4,7 @@ let num2Arr = [];
 let operandArr = [];
 
 
+
  /*   function numberID(clickedNumber) {
         console.log(clickedNumber)
      // displayValue.textContent = clickedNumber;
@@ -17,29 +18,78 @@ let operandArr = [];
 console.log(num2Arr);*/
 
 function operandID(clickedOperand) {
-    if (num2Arr < 1) {
-    displayValue.textContent='';
+  
+    if (num2Arr.length === 0) {
+ //   displayValue.textContent='';
     operandArr.push(clickedOperand);
-    } 
-}
+    }
+ else if (num2Arr.length > 0) {
 
+    displayValue.textContent = '';
+    let num1 = Number(num1Arr.join(""));
+    let num2 = Number(num2Arr.join(""));
+    let operand = operandArr.toString();
+  //  let resultArr = [];
+    let result = operate(operand, num1, num2);
+     let displayNumber = document.createTextNode(result);
+     displayValue.appendChild(displayNumber);
+  while(operandArr.length > 0) {
+        operandArr.pop();}
+      while (num1Arr.length > 0) {
+         num1Arr.pop();
+    }  while (num2Arr.length > 0) {
+         num2Arr.pop()
+     }
+  //   resultArr.push(result);
+     num1Arr.push(result);
+     operandArr.push(clickedOperand);
+
+  //   while (resultArr
+     
+}
+}
     console.log(operandArr);
     
 
 function numberID(clickedNumber) {
     console.log(clickedNumber)
  // displayValue.textContent = clickedNumber;
- if (operandArr.length === 0) {
+ if (operandArr.length === 0 && num1Arr.length === 0) {
  let displayNumber = document.createTextNode(clickedNumber);
 displayValue.appendChild(displayNumber);
     num1Arr.push(clickedNumber);
- } else if (operandArr.length === 1) {
+ } else if (operandArr.length === 1 && num2Arr.length === 0) {
+     displayValue.textContent = ''
     let displayNumber = document.createTextNode(clickedNumber);
     displayValue.appendChild(displayNumber);
         num2Arr.push(clickedNumber);
 
- }
+ } 
+     
 }
+
+
+
+
+function equals() {
+    
+    displayValue.textContent = '';
+    let num1 = Number(num1Arr.join(""));
+    let num2 = Number(num2Arr.join(""));
+    let operand = operandArr.toString();
+    let result = operate(operand, num1, num2);
+     let displayNumber = document.createTextNode(result);
+     displayValue.appendChild(displayNumber);
+  while(operandArr.length > 0) {
+        operandArr.pop();}
+      while (num1Arr > 0) {
+         num1Arr.pop();
+    }  while (num2Arr > 0) {
+         num2Arr.pop()
+     }
+     num1Arr.push(result);
+}
+
 
 
 function clearID(clickedClear) {
@@ -54,29 +104,6 @@ function clearID(clickedClear) {
     }
     return clickedClear;
 }
-
-function equals() {
-    
-    displayValue.textContent = '';
-    let num1 = Number(num1Arr.join(""));
-    let num2 = Number(num2Arr.join(""));
-    let operand = operandArr.toString();
-    let result = operate(operand, num1, num2);
-     let displayNumber = document.createTextNode(result);
-     displayValue.appendChild(displayNumber);
-    while(operandArr.length > 0) {
-         operandArr.pop();
-     } while (num1Arr > 0) {
-         num1Arr.pop();
-     } while (num2Arr > 0) {
-         num2Arr.pop()
-     }
-     num1Arr.push(result);
-}
-
-
-
-
 
 
 
