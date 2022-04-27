@@ -9,36 +9,35 @@
     <body>
     <div id="calculator">
         <div id="display"></div>
-       <div id="misc">
-           <button type="button" id="percent" class="misc" onClick="percent()">%</button>
-           <button type="button" id="+/-" class="neg/pos" onClick="neg/pos()">+/-</button>
-           <button type="button" id="clear" class="misc" onClick="window.location.reload();">AC</button>
-       </div>
-        <div id="numbers">
-            <button type="button"  id="0" class="number" onClick="numberID(this.id)">0</button>
-            <button type="button"  id="1" class="number" onClick="numberID(this.id)">1</button>
-            <button type="button"  id="2" class="number" onClick="numberID(this.id)">2</button>
-            <button type="button"  id="3" class="number" onClick="numberID(this.id)">3</button>
-            <button type="button"  id="4" class="number" onClick="numberID(this.id)">4</button>
-            <button type="button"  id="5" class="number" onClick="numberID(this.id)">5</button>
-            <button type="button"  id="6" class="number" onClick="numberID(this.id)">6</button>
+      <div id="buttons">
+    <!--   <div id="misc">-->
+      
+            <button type="button" id="clear" class="misc" onClick="window.location.reload();">AC</button>
+            <button type="button" id="negPos" class="misc" onClick="negPos()">+/-</button>
+            <button type="button" id="percent" class="misc" onClick="percent()">%</button>
+            <button type="button"  id="/" class="operand" onClick="operandID(this.id)">/</button>
+           
+      <!-- </div>--> 
             <button type="button"  id="7" class="number" onClick="numberID(this.id)">7</button>
             <button type="button"  id="8" class="number" onClick="numberID(this.id)">8</button>
             <button type="button"  id="9" class="number" onClick="numberID(this.id)">9</button>
-            <button type="button"  id="decimal" class="number" onClick="dec()">.</button> 
-        </div>
-        <div id="operands">
-            <button type="button"  id="+" class="operand" onClick="operandID(this.id)">+</button>
-            <button type="button"  id="-" class="operand" onClick="operandID(this.id)">-</button>
             <button type="button"  id="*" class="operand" onClick="operandID(this.id)">*</button>
-            <button type="button"  id="/" class="operand" onClick="operandID(this.id)">/</button>
-            <button type="button"  id="=" class="operand" onClick="equals()">=</button>
+    <!--    <div id="operands">-->
+            <button type="button"  id="4" class="number" onClick="numberID(this.id)">4</button>
+            <button type="button"  id="5" class="number" onClick="numberID(this.id)">5</button>
+            <button type="button"  id="6" class="number" onClick="numberID(this.id)">6</button>
+            <button type="button"  id="-" class="operand" onClick="operandID(this.id)">-</button>
+
+            <button type="button"  id="1" class="number" onClick="numberID(this.id)">1</button>
+            <button type="button"  id="2" class="number" onClick="numberID(this.id)">2</button>
+            <button type="button"  id="3" class="number" onClick="numberID(this.id)">3</button>
+            <button type="button"  id="+" class="operand" onClick="operandID(this.id)">+</button>
             
-        </div>
-    
-
-
-
-    </div>        
+           
+           <button type="button"  id="0" class="zero" onClick="numberID(this.id)">0</button> 
+            <button type="button"  id="decimal" class="number" onClick="dec()">.</button>    
+            <button type="button"  id="equal" class="operand" onClick="equals()">=</button>        
+   
+        </div>          
     </body>
 </html>
