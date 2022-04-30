@@ -104,7 +104,7 @@ function operandID(clickedOperand) {
     } 
    
 }
- //   console.log(operandArr);
+
     
 
 function numberID(clickedNumber) {
@@ -195,19 +195,18 @@ function equals() {
          num2Arr.pop()
      }
      num1Arr.push(result);
-}// else 
-//displayValue.textContent = Number(num1Arr.join(""));
+}
 }
 
 function dec() {
-    if (operandArr.length === 0 && num1Arr.indexOf('.') === -1) {
+    if (operandArr.length === 0 && num1Arr.join('').indexOf('.') === -1) {
         num1Arr.push('.');
         displayValue.textContent = num1Arr.join('');
-    //    displayValue.textContent += '.';
+  
         
     } else if (operandArr.length > 0 && num2Arr.indexOf('.') === -1) {
         num2Arr.push('.')
-     //   displayValue.textContent += '.';
+    
      displayValue.textContent = num2Arr.join('');
     }
 };
